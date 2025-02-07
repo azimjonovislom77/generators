@@ -7,7 +7,7 @@ def my_range(start, stop, step=1):
         yield start
         start += step
 
-print(list(my_range(1, 10, 2)))
+print(list(my_range(1, 15, 2)))
 
 
 def fibonacci_num(n):
@@ -31,7 +31,7 @@ def timing_decorator(func):
         start_t = time.time()
         result = func(*args, **kwargs)
         end_t = time.time()
-        print(f'Funksiyani bajash vaqti: {end_t - start_t:.5f} sekund')
+        print(f'Funksiyani bajash vaqti: {end_t - start_t:.4f}')
         return result
     return wrapper
 
@@ -39,7 +39,7 @@ def timing_decorator(func):
 def timing(n):
     return sum(range(n))
 
-timing(1000000)
+timing(2000000)
 
 
 def validate_age(func):
@@ -53,4 +53,4 @@ def validate_age(func):
 def ages(age):
     print(f'Yosh: {age}')
 
-ages(25)
+ages(18)
