@@ -2,12 +2,12 @@
 
 import time
 
-def my_range(start, stop, step=1):
+def py_range(start, stop, step=1):
     while start < stop:
         yield start
         start += step
 
-print(list(my_range(1, 15, 2)))
+print(list(py_range(1, 15, 2)))
 
 
 def fibonacci_num(n):
@@ -26,7 +26,7 @@ def odd_numbers(n):
 print(list(odd_numbers(10)))
 
 
-def timing_decorator(func):
+def time_decorator(func):
     def wrapper(*args, **kwargs):
         start_t = time.time()
         result = func(*args, **kwargs)
@@ -35,7 +35,7 @@ def timing_decorator(func):
         return result
     return wrapper
 
-@timing_decorator
+@time_decorator
 def timing(n):
     return sum(range(n))
 
